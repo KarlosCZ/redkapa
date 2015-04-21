@@ -1,4 +1,5 @@
 <?
+//SMAZAT tohle je testovací branch
 const DEFAULT_TITLE = "No title.";
 
 class Tag
