@@ -1,8 +1,8 @@
 <?
 const DEFAULT_TITLE = "No title.";
 
-class Tag
-{
+class Component
+	{
 	protected $tag_name = "";
 	protected $attributes = array();
 	protected $tags = array();
@@ -14,7 +14,7 @@ class Tag
 	{
 		$this->attributes[$key] = $value; 
 	}
-	function addTag($tag)
+	function addComponent($tag)
 	{
 		$this->tags[] = $tag;
 	}	
@@ -37,6 +37,8 @@ class Tag
 }
  
 
+
+ 
 class WebPage
 {
 	protected $title = "";
@@ -46,20 +48,20 @@ class WebPage
 	}
 	function render()
 	{
-		$meta = new Tag("meta");
+		$meta = new Component("meta");
 		$meta->addAttribute("charset", "utf-8");
-		$head = new Tag("head");
-		$head->addTag($meta);
+		$head = new Component("head");
+		$head->addComponent($meta);
 		return $head->render();
 	}
 }
 
-function basic_tests()
+function basic_test()
 {
 	$page = new WebPage("test");
 	print($page->render());
 }
-basic_tests();
+basic_test();
 
 
 
