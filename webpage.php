@@ -1,6 +1,7 @@
 <?
 const DEFAULT_TITLE = "No title.";
 
+//Pridal jsem komentar
 class Component
 	{
 	protected $tag_name = "";
